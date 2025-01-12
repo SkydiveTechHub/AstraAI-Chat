@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/astra.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AstraAI - Your Coding Assistant</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div id="onboarding" class="onboarding">
+      <div class="onboarding-content">
+        <img src="assets/astra.png" alt="Astra AI Logo" class="onboarding-logo" />
+        <h1>Welcome to Astra AI</h1>
+        <p>Your personal coding assistant. Ask me anything about coding, debugging, or improving your skills!</p>
+        <button id="start-button">Get Started</button>
+      </div>
+    </div>
+
+    <div id="app" class="hidden">
+      <div class="logo">
+        <img src="assets/astra.png" alt="" />
+        <span>ASTRA AI</span>
+      </div>
+      <div id="chat_container"></div>
+      <form action="">
+        <textarea
+          name="prompt"
+          rows="1"
+          cols="1"
+          placeholder="Ask Astra..."
+        ></textarea>
+        <button type="submit">
+          <img src="assets/send.svg" alt="" />
+        </button>
+      </form>
+      <div class="footer">
+        <span>Developed by DevMic - <a href="https://devmic-porfolio.vercel.app/">Check My Portfolio</a> </span>
+      </div>
+      
+    </div>
+
+    <script type="module" src="/src/script.js"></script>
+    <script>
+      const onboardingScreen = document.getElementById("onboarding");
+      const appScreen = document.getElementById("app");
+      const startButton = document.getElementById("start-button");
+
+      startButton.addEventListener("click", () => {
+        onboardingScreen.style.display = "none";
+        appScreen.classList.remove("hidden");
+      });
+    </script>
+  </body>
+</html>

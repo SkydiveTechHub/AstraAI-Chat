@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alegreya Sans", sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+}
+
+body {
+  background: #343541;  
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.onboarding {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+
+}
+
+.onboarding-content {
+  text-align: center;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+.onboarding-logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.onboarding h1 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: white;
+}
+
+.onboarding p {
+  margin: 0 0 20px;
+  font-size: 16px;
+  color: white;
+}
+
+.onboarding button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.onboarding button:hover {
+  background: #3b79c2;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background: #343541;
+
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#chat_container {
+  flex: 1;
+  width: 100%;
+  height: 73%;
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+
+
+}
+
+
+#chat_container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/astra.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  opacity: 0.1; /* Adjust the opacity to create a watermark effect */
+  pointer-events: none; /* Prevent the pseudo-element from interfering with the content */
+}
+
+
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid gray;
+  width: 100%;
+}
+
+.logo span{
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+.logo img{
+  width: 50px;
+}
+/* hides scrollbar */
+#chat_container::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 15px;
+}
+
+.ai {
+  background: #40414F;
+}
+
+.chat {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  z-index: 10;
+}
+
+.profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+
+  /* background: #5436DA; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai .profile {
+  /* background: #10a37f; */
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.message {
+  flex: 1;
+
+  color: #dcdcdc;
+  font-size: 20px;
+
+  max-width: 100%;
+  overflow-x: scroll;
+
+  /*
+   * white space refers to any spaces, tabs, or newline characters that are used to format the CSS code
+   * specifies how white space within an element should be handled. It is similar to the "pre" value, which tells the browser to treat all white space as significant and to preserve it exactly as it appears in the source code.
+   * The pre-wrap value allows the browser to wrap long lines of text onto multiple lines if necessary.
+   * The default value for the white-space property in CSS is "normal". This tells the browser to collapse multiple white space characters into a single space, and to wrap text onto multiple lines as needed to fit within its container.
+  */
+  white-space: pre-wrap; 
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* hides scrollbar */
+.message::-webkit-scrollbar {
+  display: none;
+}
+
+form {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px;
+  background: #40414F;
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+textarea {
+  width: 100%;
+
+  color: #fff;
+  font-size: 18px;
+
+  padding: 10px;
+  background: transparent;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+button {
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+form img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+.footer span{
+  text-align: center;
+  color: gainsboro;
+}
+.footer span a{
+  color: gainsboro;
+  font-weight: 600;
+}
