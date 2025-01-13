@@ -7,6 +7,7 @@ dotenv.config();
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY, // Ensure your .env file contains the correct API key
+
 });
 
 const app = express();
