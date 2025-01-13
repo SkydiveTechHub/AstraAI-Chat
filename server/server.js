@@ -6,7 +6,7 @@ import cors from 'cors';
 dotenv.config();
 
 const openai = new OpenAI({
-  apiKey:"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", 
+  apiKey: process.env.OPENAI_API_KEY, // Ensure your .env file contains the correct API key
 });
 
 const app = express();
